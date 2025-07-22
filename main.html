@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Economics of Fusion-Powered Gold</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+            color: #1A1A1A;
+        }
+        .brand-blue { color: #00A6FB; }
+        .brand-orange { color: #F37748; }
+        .brand-gold { color: #EAD2AC; }
+        .bg-brand-blue { background-color: #00A6FB; }
+        .bg-brand-orange { background-color: #F37748; }
+        .bg-brand-gold { background-color: #EAD2AC; }
+        .bg-brand-dark { background-color: #1A1A1A; }
+        .text-brand-dark { color: #1A1A1A; }
+        
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .stat-number {
+            font-weight: 900;
+            font-size: 4rem;
+            line-height: 1;
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 900;
+            line-height: 1.2;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .section-subtitle {
+            font-size: 1.125rem;
+            text-align: center;
+            color: #4A5568;
+            max-width: 800px;
+            margin: 0 auto 3rem auto;
+        }
+        .flow-arrow {
+            font-size: 2.5rem;
+            color: #00A6FB;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center my-12 md:my-16">
+            <h1 class="text-4xl md:text-6xl font-black text-brand-dark uppercase tracking-wider">Fusion-Powered Gold</h1>
+            <p class="text-xl md:text-2xl mt-4 brand-blue font-bold">The $100,000/kg Question</p>
+        </header>
+
+        <section class="my-16">
+            <div class="card text-center max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold text-brand-dark mb-2">A New Era of Alchemy</h2>
+                <p class="text-lg text-gray-600 mb-4">Startup Marathon Fusion claims a breakthrough: producing gold as a byproduct of clean energy generation. Their target is ambitious:</p>
+                <div class="stat-number brand-orange">5,000 kg</div>
+                <p class="text-xl font-bold text-gray-700 mt-2">of Gold per Gigawatt-Year of Electricity</p>
+                <p class="text-sm text-gray-500 mt-1">This could fundamentally alter the economics of fusion power.</p>
+            </div>
+        </section>
+
+        <section class="my-20 md:my-24">
+            <h2 class="section-title">From Mercury to Gold: The Process</h2>
+            <p class="section-subtitle">This isn't magic, it's nuclear physics. The process uses the intense neutron flux from a fusion reactor to transmute one element into another in a few key steps.</p>
+            <div class="card">
+                <div class="flex flex-col md:flex-row items-center justify-around text-center p-4">
+                    <div class="flex-1 p-4">
+                        <div class="text-6xl mb-2">⚛️</div>
+                        <h3 class="text-xl font-bold">1. Feedstock</h3>
+                        <p class="text-gray-600">The process starts with a specific, stable isotope: <b class="text-brand-dark">Mercury-198</b>.</p>
+                    </div>
+                    <div class="flow-arrow my-4 md:my-0">➔</div>
+                    <div class="flex-1 p-4">
+                        <div class="text-6xl mb-2">💥</div>
+                        <h3 class="text-xl font-bold">2. Transmutation</h3>
+                        <p class="text-gray-600">High-energy neutrons from the fusion reaction bombard the Mercury-198, converting it to radioactive <b class="text-brand-dark">Mercury-197</b>.</p>
+                    </div>
+                    <div class="flow-arrow my-4 md:my-0">➔</div>
+                    <div class="flex-1 p-4">
+                        <div class="text-6xl mb-2">✨</div>
+                        <h3 class="text-xl font-bold">3. Decay</h3>
+                        <p class="text-gray-600">With a half-life of 65 hours, Mercury-197 naturally decays into the only stable isotope of gold: <b class="text-brand-dark">Gold-197</b>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="my-20 md:my-24">
+            <h2 class="section-title">The Cost of Creation</h2>
+            <p class="section-subtitle">While the process sounds revolutionary, its economic viability is complex. The final price tag is dominated by the immense cost of the fusion plant itself.</p>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+                <div class="md:col-span-2 card">
+                    <h3 class="text-xl font-bold text-center mb-4">Illustrative Cost Breakdown</h3>
+                    <p class="text-gray-600 text-center mb-4">Based on optimistic future projections, the cost structure for producing one kilogram of fusion gold reveals where the financial burden lies.</p>
+                     <div class="text-center font-bold text-lg mt-4">
+                        <p><span class="brand-blue">■</span> Fusion Plant: <span class="text-brand-dark">93.2%</span></p>
+                        <p><span class="brand-orange">■</span> Holding Costs: <span class="text-brand-dark">6.7%</span></p>
+                        <p><span class="brand-gold">■</span> Hg-198 Feedstock: <span class="text-brand-dark">0.1%</span></p>
+                    </div>
+                </div>
+                <div class="md:col-span-3">
+                    <div class="chart-container h-[400px] md:h-[450px]">
+                        <canvas id="costBreakdownChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-20 md:my-24">
+            <h2 class="section-title">The Feedstock Dilemma</h2>
+            <p class="section-subtitle">The single greatest variable is the cost of the Mercury-198 feedstock. Currently a scientific curiosity, its price must plummet for fusion gold to be viable.</p>
+            <div class="card">
+                <div class="chart-container">
+                    <canvas id="mercuryCostChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-4">For the process to be economical, the price of industrial-scale Mercury-198 must decrease by a factor of 150 million.</p>
+            </div>
+        </section>
+
+        <section class="my-20 md:my-24">
+            <h2 class="section-title">Market Snapshot: Fusion vs. Mined</h2>
+            <p class="section-subtitle">Under a highly optimistic scenario—with cheap fusion energy and affordable feedstock—how would the final cost compare to today's gold market?</p>
+            <div class="card">
+                 <div class="chart-container">
+                    <canvas id="marketComparisonChart"></canvas>
+                </div>
+                <p class="text-center text-gray-600 mt-4">Even with idealized assumptions, the production cost is substantial, though it approaches current market rates. This highlights the potential, but also the immense economic hurdles.</p>
+            </div>
+        </section>
+
+        <section class="my-20 md:my-24">
+             <h2 class="section-title">The Long Wait: A 17-Year Maturation</h2>
+             <p class="section-subtitle">The newly created gold is radioactive. It cannot be sold immediately and requires a long, secure storage period to allow the radioactivity to decay to safe levels.</p>
+             <div class="card p-8">
+                 <div class="relative">
+                     <div class="h-2 bg-gray-200 rounded-full"></div>
+                     <div class="absolute top-0 left-0 h-2 bg-brand-orange rounded-full" style="width: 100%;"></div>
+                     <div class="absolute top-[-1.25rem] left-0 text-center w-1/3">
+                         <div class="w-8 h-8 bg-brand-blue rounded-full mx-auto flex items-center justify-center text-white font-bold">1</div>
+                         <p class="mt-2 font-semibold">Production</p>
+                     </div>
+                     <div class="absolute top-[-1.25rem] left-1/2 -translate-x-1/2 text-center w-1/3">
+                         <div class="w-8 h-8 bg-brand-orange rounded-full mx-auto flex items-center justify-center text-white font-bold">⏳</div>
+                         <p class="mt-2 font-semibold">17 Years Secure Storage</p>
+                     </div>
+                     <div class="absolute top-[-1.25rem] right-0 text-center w-1/3">
+                         <div class="w-8 h-8 bg-green-500 rounded-full mx-auto flex items-center justify-center text-white font-bold">2</div>
+                         <p class="mt-2 font-semibold">Market Ready</p>
+                     </div>
+                 </div>
+                 <p class="text-center text-gray-600 mt-16">This mandatory holding period introduces significant financial costs and liquidity constraints, as capital is tied up for nearly two decades.</p>
+             </div>
+         </section>
+
+        <section class="my-20 md:my-24">
+            <h2 class="section-title">Primary Hurdles & Uncertainties</h2>
+            <p class="section-subtitle">Beyond the costs, the path to commercial fusion gold is fraught with immense technical, economic, and regulatory challenges that must be overcome.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <div class="text-6xl mb-4">🔬</div>
+                    <h3 class="text-xl font-bold mb-2">Technology Readiness</h3>
+                    <p class="text-gray-600">Commercial fusion is still decades away. The gold transmutation process itself is at an extremely low Technology Readiness Level (TRL) and requires massive R&D investment.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-6xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold mb-2">Capital & Market Risk</h3>
+                    <p class="text-gray-600">Fusion plants require tens of billions in upfront capital. Furthermore, successfully producing large amounts of gold could devalue the commodity, undermining the entire economic model.</p>
+                </div>
+                <div class="card text-center">
+                    <div class="text-6xl mb-4">⚖️</div>
+                    <h3 class="text-xl font-bold mb-2">Regulatory Framework</h3>
+                    <p class="text-gray-600">No regulations exist for commercial fusion, let alone for handling and selling transmuted, initially radioactive materials. This uncertainty is a major barrier to development.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm mt-16 mb-8">
+            <p>Data sourced from the techno-economic assessment of Marathon Fusion's claims. All financial figures are illustrative and based on future projections and optimistic assumptions.</p>
+            <p>Infographics made by S.M. Muzammil Afroz. No SVG or Mermaid JS used in this document.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const brandColors = {
+            blue: '#00A6FB',
+            orange: '#F37748',
+            gold: '#EAD2AC',
+            dark: '#1A1A1A',
+            gray: '#4A5568'
+        };
+
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxWidth && currentLine.length > 0) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        }
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+              return label.join(' ');
+            }
+            return label;
+        };
+
+        const defaultChartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        color: brandColors.dark,
+                        font: {
+                            size: 14
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: tooltipTitleCallback
+                    },
+                    backgroundColor: brandColors.dark,
+                    titleFont: { size: 16, weight: 'bold' },
+                    bodyFont: { size: 14 },
+                    padding: 12,
+                    cornerRadius: 6
+                }
+            }
+        };
+
+        new Chart(document.getElementById('costBreakdownChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Fusion Plant (Capital & O&M)', 'Post-Production Holding Costs', 'Mercury-198 Feedstock'],
+                datasets: [{
+                    label: 'Cost Contribution',
+                    data: [93.2, 6.7, 0.1],
+                    backgroundColor: [brandColors.blue, brandColors.orange, brandColors.gold],
+                    borderColor: '#FFFFFF',
+                    borderWidth: 4,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                cutout: '70%',
+                plugins: {
+                    ...defaultChartOptions.plugins,
+                     legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('mercuryCostChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Current "Scientific" Price', 'Required "Industrial" Price'],
+                datasets: [{
+                    label: 'Cost per Kilogram (Logarithmic Scale)',
+                    data: [15000000000, 100],
+                    backgroundColor: [brandColors.orange, brandColors.blue],
+                    borderRadius: 6,
+                    barPercentage: 0.6
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                indexAxis: 'y',
+                scales: {
+                    x: {
+                        type: 'logarithmic',
+                        title: {
+                            display: true,
+                            text: 'Cost per kg in USD (Log Scale)',
+                            color: brandColors.dark,
+                            font: { size: 14 }
+                        },
+                         ticks: {
+                            color: brandColors.gray,
+                            callback: function(value, index, values) {
+                                return '$' + Number(value.toPrecision(3)).toLocaleString();
+                            }
+                        }
+                    },
+                    y: {
+                         ticks: {
+                            color: brandColors.dark,
+                            font: { size: 14, weight: 'bold' }
+                        }
+                    }
+                },
+                plugins: {
+                    ...defaultChartOptions.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+        new Chart(document.getElementById('marketComparisonChart'), {
+            type: 'bar',
+            data: {
+                labels: [wrapLabel('Fusion Gold (Illustrative Cost)', 16), wrapLabel('Conventional Gold (Market Price)', 16)],
+                datasets: [{
+                    label: 'Price per Kilogram (USD)',
+                    data: [98680, 110250],
+                    backgroundColor: [brandColors.blue, brandColors.gold],
+                    borderRadius: 6,
+                    barPercentage: 0.5
+                }]
+            },
+            options: {
+                ...defaultChartOptions,
+                 scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Price per kg in USD',
+                            color: brandColors.dark,
+                            font: { size: 14 }
+                        },
+                        ticks: {
+                            color: brandColors.gray,
+                            callback: function(value) {
+                                return '$' + value.toLocaleString();
+                            }
+                        }
+                    },
+                    x: {
+                         ticks: {
+                            color: brandColors.dark,
+                            font: { size: 14, weight: 'bold' }
+                        }
+                    }
+                },
+                plugins: {
+                    ...defaultChartOptions.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
